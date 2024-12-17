@@ -1,0 +1,26 @@
+#leitura que cria o arquivo.txt
+arquivo = open('numeros.txt', 'w')
+for linha in range (1,101):
+    arquivo.write(f'{linha}\n')
+arquivo.close()
+
+#Leitura de Arquivo e print da slinhas
+arquivo = open("numeros.txt", "r")
+for linha in arquivo.readlines():
+    print(linha)
+arquivo.close()
+
+#####abre e fecha arquivos
+
+with open ("numeros.txt", "r") as arquivo:
+    for linha in arquivo.readlines():
+        print(linha)
+
+##### criar duas listas partindo de leitura e manipulação
+with open ("impares.txt", "w") as ímpares:
+    with open ("pares.txt", "w") as pares:
+        for n in range (0,1001):
+            if n %2 ==0:
+                pares.write(f"{n}\n")
+            else:
+                ímpares.write(f"{n}\n")
